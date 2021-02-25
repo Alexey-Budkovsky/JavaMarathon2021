@@ -8,7 +8,7 @@ public class Task1 {
         System.out.println("Введите название города");
         boolean toggle = true;
         while (toggle) {
-        String city = input.nextLine();
+            String city = input.nextLine();
             switch (city) {
                 case "Stop":
                     System.out.println("Программа завершила работу");

@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Task3 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        for(int i =0; i < 5; i++) {
+        for (int i = 0; i < 5; i++) {
             System.out.println("Введите число для делимого");
             double dividend = input.nextDouble();
             System.out.println("Введите число для делителя");
