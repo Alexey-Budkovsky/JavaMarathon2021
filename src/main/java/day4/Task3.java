@@ -19,7 +19,7 @@ public class Task3 {
 //                System.out.print(array[i][j] + " "); // Проверка сгенерированного массива
             }
 //            System.out.println(); // Проверка сгенерированного массива
-            if (compare < sum) {
+            if (compare <= sum) {
                 compare = sum;
                 indexArrLine = i;
             }
