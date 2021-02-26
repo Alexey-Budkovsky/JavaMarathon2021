@@ -14,7 +14,8 @@ public class Task1 {
 
 //        Создание массива случайных чисел в диапазоне от 0 до 10:
         Random rand = new Random();
-        for (int i = 0; i < array.length; i++) array[i] = rand.nextInt(11);
+        for (int i = 0; i < array.length; i++)
+            array[i] = rand.nextInt(11);
 
         int moreThan_8 = 0;
         int equalTo_1 = 0;
@@ -28,8 +29,11 @@ public class Task1 {
         for (int i : array) {
             if (i > 8) moreThan_8++;
             if (i == 1) equalTo_1++;
-            if (i % 2 == 0) even++;
-            if (i % 2 != 0) odd++;
+            if (i % 2 == 0) {
+                even++;
+            } else {
+                odd++;
+            }
             sum += i;
         }
 

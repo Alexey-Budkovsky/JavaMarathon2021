@@ -20,8 +20,10 @@ public class Task2 {
         for (int i : array) {
             if (i > maximum) maximum = i;
             if (i < minimum) minimum = i;
-            if (i % 10 == 0) end_0++;
-            if (i % 10 == 0) sumEnd_0 += i;
+            if (i % 10 == 0) {
+                end_0++;
+                sumEnd_0 += i;
+            }
         }
 //        Информация о массиве:
         System.out.println("Наибольший элемент массива: " + maximum);
