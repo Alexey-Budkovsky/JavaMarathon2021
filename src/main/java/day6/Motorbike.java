@@ -1,4 +1,4 @@
-package day5;
+package day6;
 
 public class Motorbike {
     private String model;
@@ -7,22 +7,10 @@ public class Motorbike {
 
     //    Конструктор класса
     public Motorbike(String model, String color, int yearOfProduction) {
-        System.out.println("\"I need your clothes, your boots and your motorcycle!\"\n");
         this.model = model;
         this.color = color;
         this.yearOfProduction = yearOfProduction;
     }
-
-    //    Второй конструктор
-    public Motorbike(String model) {
-        this.model = model;
-    }
-
-    //    Третий конструктор
-    public Motorbike() {
-        this.model = "Harley-Davidson Sport Glide";
-    }
-
 
     //    Геттеры
     public String getModel() {
@@ -37,6 +25,15 @@ public class Motorbike {
         return yearOfProduction;
     }
 
-    public void info() {
+    void info() {
+        System.out.println("Это мотоцикл");
     }
+
+    int yearDifference(int inputYear) {
+        inputYear -= yearOfProduction;
+        if (inputYear < 0) inputYear *= -1;
+        return inputYear;
+    }
+
+
 }
