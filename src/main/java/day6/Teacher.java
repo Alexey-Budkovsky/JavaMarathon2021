@@ -28,7 +28,7 @@ public class Teacher {
 
     void evaluate(Student student) {
         Random rand = new Random();
-        int evaluationNumber = rand.nextInt(6-2) + 2;
+        int evaluationNumber = rand.nextInt(6 - 2) + 2;
         String evaluationName = "";
         switch (evaluationNumber) {
             case 5:
@@ -40,9 +40,8 @@ public class Teacher {
             case 3:
                 evaluationName = "удовлетворительно";
                 break;
-            case 2:
+            default:
                 evaluationName = "неудовлетворительно";
-                break;
         }
         System.out.printf("Преподаватель %s оценил студента по имени %s по предмету %s на оценку %s.\n", name, student, subject, evaluationName);
     }
