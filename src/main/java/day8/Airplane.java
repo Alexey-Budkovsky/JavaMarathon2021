@@ -1,4 +1,4 @@
-package day7;
+package day8;
 
 public class Airplane {
     private String producer;
@@ -56,5 +56,14 @@ public class Airplane {
         else if (plane1.length < plane2.length)
             System.out.printf("%s длиннее, чем %s\n", plane2.producer, plane1.producer);
         else System.out.println("Самолеты одинаковой длинны.");
+    }
+
+    @Override
+    public String toString() {
+        return "Изготовитель: " + producer + "\n" +
+                "Год выпуска: " + year + "\n" +
+                "Длинна, м: " + length + "\n" +
+                "Вес, кг: " + weight;
+
     }
 }

@@ -9,8 +9,7 @@ public class Player {
     // Конструктор
     public Player(int stamina) {
         this.stamina = stamina;
-        countPlayers++;
-        if (countPlayers > 6) countPlayers = 6;
+        if (countPlayers < 6) countPlayers++; // Исправил. Видео решения ещё не смотрел
     }
 
     // Геттеры
@@ -24,10 +23,8 @@ public class Player {
 
     // Методы
     public void run() {
-        stamina--;
-        if (stamina == 0) countPlayers--;
-        if (stamina < 0) stamina = MIN_STAMINA;
-
+        if (stamina > 0) stamina--;
+        if (stamina == 0) countPlayers--; // Исправил. Видео решения ещё не смотрел
     }
 
     public static void info() {
