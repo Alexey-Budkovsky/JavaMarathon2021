@@ -1,8 +1,8 @@
 package day11.task1;
 
 public class Warehouse {
-    public int countPickedOrders;
-    public int countDeliveredOrders;
+    private int countPickedOrders;
+    private int countDeliveredOrders;
 
     //Геттеры
     public int getCountPickedOrders() {
@@ -11,6 +11,14 @@ public class Warehouse {
 
     public int getCountDeliveredOrders() {
         return countDeliveredOrders;
+    }
+
+    public void incrementPickedOrders() {
+        countPickedOrders++;
+    }
+
+    public void incrementDeliveredOrders() {
+        countDeliveredOrders++;
     }
 
     @Override
