@@ -14,8 +14,7 @@ public class MusicArtist {
 
     //Методы
     public String printName() {
-        String isName = name + ", ";
-        return isName;
+        return name;
     }
 
 

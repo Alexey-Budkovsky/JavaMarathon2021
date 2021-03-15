@@ -5,8 +5,8 @@ import java.util.List;
 
 public class MusicBand {
     //Поля
-    private String name;
-    private int year;
+    private final String name;
+    private final int year;
     private List<MusicArtist> musicians;
 
     //Конструкторы
@@ -37,13 +37,28 @@ public class MusicBand {
     //Методы
     public void printMusicians() {
         String namesOfMusicians = "";
-        for (MusicArtist m:
-             musicians) {
-            namesOfMusicians += m.printName();
+        if (musicians.size() >0) {
+            for (MusicArtist m :
+                    musicians) {
+                namesOfMusicians += ", " + m.printName();
+            }
+        namesOfMusicians = namesOfMusicians.substring(2) + ".";
         }
-        namesOfMusicians = namesOfMusicians.substring(0, namesOfMusicians.length() - 2) + ".";
+        else
+            namesOfMusicians = "список пуст.";
         System.out.printf("Группа \"%s\". Музыканты: %s\n", name, namesOfMusicians);
     }
+
+    //Добавить всех  участников
+    public void addAllMambers(MusicBand otherBand) {
+        musicians.addAll(otherBand.getMusicians());
+    }
+
+    //Очистить список участников
+    public void clearAllMambers() {
+        musicians.clear();
+    }
+
 
     //toString
     @Override

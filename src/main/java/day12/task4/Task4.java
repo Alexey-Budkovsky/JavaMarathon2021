@@ -33,12 +33,12 @@ public class Task4 {
         System.out.println();
         band1.printMambers();
         band2.printMambers();
-//Повторное слияние групп
-        transferMembers(band2, band1);
-//Проверки
-        System.out.println();
-        band1.printMambers();
-        band2.printMambers();
+////Повторное слияние групп
+//        transferMembers(band2, band1);
+////Проверки
+//        System.out.println();
+//        band1.printMambers();
+//        band2.printMambers();
     }
 
     //Cтатический метод перестановки  групп :)

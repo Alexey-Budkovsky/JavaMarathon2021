@@ -28,21 +28,34 @@ public class Task5 {
         band2.setMusicians(blackSabbath);
 //Проверка
         System.out.println(band2);
-//Перестановка
+//Слияние групп
         transferMembers(band1, band2);
 //Проверки
+        System.out.println();
+        band1.printMusicians();
+        band2.printMusicians();
+//Повторное слияние групп
+        transferMembers(band2, band1);
+//Проверки
+        System.out.println();
         band1.printMusicians();
         band2.printMusicians();
 
 
     }
 
+//    //Cтатический метод перестановки  групп :)
+//    static void permutationMembers(MusicBand bandFirst, MusicBand bandSecond) {
+//        MusicBand tempBand = new MusicBand("", 0);
+//        tempBand.getMusicians(bandFirst.getMusicians());
+//        bandFirst.setMusicians(bandSecond.getMusicians());
+//        bandSecond.setMusicians(tempBand.getMusicians());
+//    }
+
     //Cтатический метод слияния групп
     static void transferMembers(MusicBand bandFirst, MusicBand bandSecond) {
-        MusicBand tempBand = new MusicBand("", 0);
-        tempBand.setMusicians(bandFirst.getMusicians());
-        bandFirst.setMusicians(bandSecond.getMusicians());
-        bandSecond.setMusicians(tempBand.getMusicians());
+        bandFirst.addAllMambers(bandSecond);
+        bandSecond.clearAllMambers();
     }
 
 
