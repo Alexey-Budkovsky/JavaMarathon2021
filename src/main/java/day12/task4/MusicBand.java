@@ -44,9 +44,19 @@ public class MusicBand {
     }
 
     //Методы
+    //Список участников
     public void printMambers() {
         System.out.printf("Группа \"%s\". Музыканты: %s\n", name, mambers);
     }
+    //Добавить всех  участников
+    public void addAllMambers(MusicBand otherBand) {
+        mambers.addAll(otherBand.getMambers());
+    }
+    //Очистить список участников
+    public void clearAllMambers(){
+        mambers.clear();
+    }
+
 
     //toString
     @Override

@@ -16,7 +16,7 @@ public class Task5 {
 //Назначаем музыкантов группе 1
         band1.setMusicians(deepPurple);
 //Проверка
-//        System.out.println(band1);
+        System.out.println(band1);
 //Состав 2 группы
         MusicBand band2 = new MusicBand("Black Sabbath", 1968);
         List<MusicArtist> blackSabbath = new ArrayList<>();
@@ -27,7 +27,7 @@ public class Task5 {
 //Назначаем музыкантов группе 2
         band2.setMusicians(blackSabbath);
 //Проверка
-//        System.out.println(band2);
+        System.out.println(band2);
 //Перестановка
         transferMembers(band1, band2);
 //Проверки

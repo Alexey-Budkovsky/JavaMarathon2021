@@ -27,19 +27,32 @@ public class Task4 {
 //Проверки
 //        System.out.println(band2.getMambers());
 //        System.out.println(band2);
-//Перестановка
+//Слияние групп
         transferMembers(band1, band2);
 //Проверки
+        System.out.println();
+        band1.printMambers();
+        band2.printMambers();
+//Повторное слияние групп
+        transferMembers(band2, band1);
+//Проверки
+        System.out.println();
         band1.printMambers();
         band2.printMambers();
     }
 
-    //Cтатический метод слияния групп
-    static void transferMembers(MusicBand bandFirst, MusicBand bandSecond) {
+    //Cтатический метод перестановки  групп :)
+    static void permutationMembers(MusicBand bandFirst, MusicBand bandSecond) {
         MusicBand tempBand = new MusicBand();
         tempBand.setMambers(bandFirst.getMambers());
         bandFirst.setMambers(bandSecond.getMambers());
         bandSecond.setMambers(tempBand.getMambers());
+    }
+
+    //Cтатический метод слияния групп
+    static void transferMembers(MusicBand bandFirst, MusicBand bandSecond) {
+        bandFirst.addAllMambers(bandSecond);
+        bandSecond.clearAllMambers();
     }
 
 

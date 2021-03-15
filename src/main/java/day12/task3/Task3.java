@@ -23,21 +23,7 @@ public class Task3 {
 //Добавить их в список
         List<MusicBand> bands = new ArrayList<>();
         Collections.addAll
-                (
-                bands,
-                band1,
-                band2,
-                band3,
-                band4,
-                band5,
-                band6,
-                band7,
-                band8,
-                band9,
-                band10,
-                band11,
-                band12
-                );
+                (bands, band1, band2, band3, band4, band5, band6, band7, band8, band9, band10, band11, band12);
 //Проверка
 //        System.out.println(bands);
 //Перемешать список
