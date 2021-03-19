@@ -7,13 +7,13 @@ public class MusicBand {
     //Поля
     private final String name;
     private final int year;
-    private List<MusicArtist> musicians;
+    private List<MusicArtist> mambers;
 
     //Конструкторы
     public MusicBand(String name, int year) {
         this.name = name;
         this.year = year;
-        this.musicians = new ArrayList<>();
+        this.mambers = new ArrayList<>();
     }
 
     //Геттеры
@@ -25,38 +25,37 @@ public class MusicBand {
         return name;
     }
 
-    public List<MusicArtist> getMusicians() {
-        return musicians;
+    public List<MusicArtist> getMambers() {
+        return mambers;
     }
 
     //Сеттеры
-    public void setMusicians(List<MusicArtist> musicians) {
-        this.musicians = musicians;
+    public void setMambers(List<MusicArtist> musicians) {
+        this.mambers = musicians;
     }
 
     //Методы
     public void printMusicians() {
-        String namesOfMusicians = "";
-        if (musicians.size() >0) {
+        String namesOfMambers = "";
+        if (mambers.size() > 0) {
             for (MusicArtist m :
-                    musicians) {
-                namesOfMusicians += ", " + m.printName();
+                    mambers) {
+                namesOfMambers += ", " + m.printName();
             }
-        namesOfMusicians = namesOfMusicians.substring(2) + ".";
-        }
-        else
-            namesOfMusicians = "список пуст.";
-        System.out.printf("Группа \"%s\". Музыканты: %s\n", name, namesOfMusicians);
+            namesOfMambers = namesOfMambers.substring(2) + ".";
+        } else
+            namesOfMambers = "список пуст.";
+        System.out.printf("Группа \"%s\". Музыканты: %s\n", name, namesOfMambers);
     }
 
     //Добавить всех  участников
     public void addAllMambers(MusicBand otherBand) {
-        musicians.addAll(otherBand.getMusicians());
+        mambers.addAll(otherBand.getMambers());
     }
 
     //Очистить список участников
     public void clearAllMambers() {
-        musicians.clear();
+        mambers.clear();
     }
 
 
@@ -66,7 +65,7 @@ public class MusicBand {
         return "MusicBand{" +
                 "name='" + name + '\'' +
                 ", year=" + year +
-                ", musicians=" + musicians +
+                ", musicians=" + mambers +
                 '}';
     }
 

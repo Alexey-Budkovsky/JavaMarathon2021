@@ -42,7 +42,7 @@ public class User{
     //возвращает True, если пользователь user является другом
     //и False, если пользователь user не является другом
     public boolean isFriend(User user) {
-        if (user.isSubscribed(this))
+        if (user.isSubscribed(this) && isSubscribed(user))
             return true;
         else
             return false;

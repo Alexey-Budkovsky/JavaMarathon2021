@@ -14,7 +14,7 @@ public class Task5 {
         deepPurple.add(new MusicArtist("Roger Glover", 1945));
         deepPurple.add(new MusicArtist("Ian Paice", 1948));
 //Назначаем музыкантов группе 1
-        band1.setMusicians(deepPurple);
+        band1.setMambers(deepPurple);
 //Проверка
         System.out.println(band1);
 //Состав 2 группы
@@ -25,7 +25,7 @@ public class Task5 {
         blackSabbath.add(new MusicArtist("Terence \"Geezer\" Butler", 1949));
         blackSabbath.add(new MusicArtist("Bill Ward", 1948));
 //Назначаем музыкантов группе 2
-        band2.setMusicians(blackSabbath);
+        band2.setMambers(blackSabbath);
 //Проверка
         System.out.println(band2);
 //Слияние групп
@@ -44,13 +44,13 @@ public class Task5 {
 
     }
 
-//    //Cтатический метод перестановки  групп :)
-//    static void permutationMembers(MusicBand bandFirst, MusicBand bandSecond) {
-//        MusicBand tempBand = new MusicBand("", 0);
-//        tempBand.getMusicians(bandFirst.getMusicians());
-//        bandFirst.setMusicians(bandSecond.getMusicians());
-//        bandSecond.setMusicians(tempBand.getMusicians());
-//    }
+    //Cтатический метод перестановки  групп :)
+    static void permutationMembers(MusicBand bandFirst, MusicBand bandSecond) {
+        MusicBand tempBand = new MusicBand("", 0);
+        tempBand.setMambers(bandFirst.getMambers());
+        bandFirst.setMambers(bandSecond.getMambers());
+        bandSecond.setMambers(tempBand.getMambers());
+    }
 
     //Cтатический метод слияния групп
     static void transferMembers(MusicBand bandFirst, MusicBand bandSecond) {
