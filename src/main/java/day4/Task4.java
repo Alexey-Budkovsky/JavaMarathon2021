@@ -19,7 +19,7 @@ public class Task4 {
 //        Счетчик сумм "троек" значений в массиве
         for (int i = 0; i < array.length - 2; i++) {
             for (int j = i; j < i + 3; j++) {
-//                System.out.print(j + ", "); // проверка тндексации "троек"
+//                System.out.print(j + ", "); // проверка индексации "троек"
                 sum += array[j];
             }
             if (compare < sum) {
@@ -27,7 +27,7 @@ public class Task4 {
                 indexArrLine = i;
             }
             sum = 0;
-//            System.out.println(); // проверка тндексации "троек"
+//            System.out.println(); // проверка индексации "троек"
         }
 //        Максимальная сумма среди трех соседних элементов массива:
         System.out.println(compare);
